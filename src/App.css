@@ -6,7 +6,7 @@ div {
  stroke-dasharray:1400 ;
 
 
- animation: draw 3s ease-in-out;
+ animation: draw-in-steps 3s ease-in-out;
  animation-iteration-count: infinite;
  animation-direction: alternate;
 }
@@ -17,6 +17,20 @@ div {
         stroke:rgb(221, 243, 23);
     }
 }
+
+
+@keyframes draw-in-steps{
+    0%{
+        stroke-dasharray: 400;
+        stroke:rgb(171, 43, 175);
+    }
+    50%{
+        stroke-dasharray: 800;
+        stroke:rgb(129, 18, 139);
+    }
+}
+
+
 
 
 #loading{
@@ -38,3 +52,23 @@ div {
         fill:rgb(221, 243, 23);
     }
 } */
+
+#github-svg{
+ stroke-dasharray:1200 ;
+ stroke-dashoffset: 1200;
+
+
+animation: draw-git 3s ease-in-out;
+ animation-iteration-count: infinite;
+ animation-direction: alternate
+}
+
+
+@keyframes draw-git{
+     to{
+        stroke-dashoffset: 0;
+        /* stroke:rgb(239, 19, 247); */
+        
+        
+    }
+}
